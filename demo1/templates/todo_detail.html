@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo Detail</title>
+</head>
+<body>
+    <h1>Todo Detail</h1>
+    <p><strong>Task:</strong> {{ todo.task }}</p>
+    <p><strong>Completed:</strong> {% if todo.completed %}Yes{% else %}No{% endif %}</p>
+    <a href="{% url 'todo-update-html' todo.pk %}">Edit</a> |
+    <a href="{% url 'todo-delete-html' todo.pk %}">Delete</a> |
+    <a href="{% url 'todo-list-html' %}">Back to List</a>
+</body>
+</html>
